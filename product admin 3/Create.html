@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Button Example</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="createButton" onclick="showTextField()">Create</button>
+    <div id="textFieldContainer" class="hidden">
+        <input type="text" id="textField">
+    </div>
+
+    <script>
+        function showTextField() {
+            var textFieldContainer = document.getElementById("textFieldContainer");
+            textFieldContainer.classList.remove("hidden");
+        }
+    </script>
+</body>
+</html>
