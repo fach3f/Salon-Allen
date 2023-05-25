@@ -32,19 +32,19 @@ if ($result->num_rows == 1) {
 
     // Mengarahkan role admin ke halaman admin/index.htm
     if ($role == 'admin') {
-        header("Location: ../product admin/read_products.php?login_success=true");
+        header("Location: admin/index.html?login_success=true");
         exit();
     }
 
     // Mengarahkan role user ke halaman user/index.html
     if ($role == 'user') {
-        header("Location: shop.php?login_success=true");
+        header("Location: user/index.html?login_success=true");
         exit();
     }
 } else {
     // Login gagal
     // Redirect pengguna kembali ke halaman login dengan parameter login_success false
-    header("Location: login.php?login_success=false");
+    header("Location: admin/login.html");
     exit();
 }
 
